@@ -48,7 +48,6 @@ EventTarget.prototype.addEventListener = function(type, listener) {
     listenersCount += 1;
     if (listenersCount === 6) {
       closeChat = function() {
-        console.error('close chat');
         listener(new KeyboardEvent('keydown', {key: 'Escape'}));
       };
     }
